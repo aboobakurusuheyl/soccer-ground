@@ -1,0 +1,22 @@
+.search-result{
+  width:200px;
+  height: 20px;
+  padding: 0px;
+  background-color: rgba(255,210,0,0.5);
+  cursor: pointer;
+  margin: auto;
+}
+
+.search-result:hover {
+  color: #eee;
+  background-color: #607D8B;
+}
+
+#search-box{
+  padding: -200px;
+  width: 200px;
+  height: 20px;
+  background-color: rgba(255,210,0,0.5);
+  margin: auto;
+  display: block;
+}

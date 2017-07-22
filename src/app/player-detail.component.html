@@ -1,0 +1,28 @@
+<div id="div1" *ngIf="player" style="text-align: center">
+  <h2>{{player.name}} Details:</h2>
+  <div>
+    <img src="{{player.image}}"/>
+  </div>
+  <div>
+    <label>ID: </label>{{player.id}}
+  </div>
+  <div>
+    <label>Name: </label>
+    <input [(ngModel)]="player.name" placeholder="Name" />
+   </div>
+  <div>
+    <label>Team: </label>
+    <input [(ngModel)]="player.team" placeholder="Team" />
+  </div>
+  <div>
+    <label>Age: </label>
+    <input [(ngModel)]="player.age" placeholder="Age" />
+  </div>
+  <div>
+    <label>Goals: </label>
+    <input [(ngModel)]="player.goals" placeholder="Goals" />
+  </div>
+  <button (click)="goBack()">Back</button>
+  <button (click)="save()">Save</button>
+</div>
+<!-- added all the detail fields and changed css -->

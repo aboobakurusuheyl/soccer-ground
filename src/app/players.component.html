@@ -1,0 +1,24 @@
+<div id=div1>
+<h2>All players</h2>
+<ul class="players">
+  <li *ngFor="let player of players" (click)="onSelect(player)"
+      [class.selected]="player === selectedplayer">
+    <span class="badge">{{player.id}}</span>
+    <span>{{player.name}}</span>
+    <button class="delete"
+      (click)="delete(player); $event.stopPropagation()">x</button>
+  </li>
+</ul>
+<div *ngIf="selectedplayer" style="text-align: center">
+  <h2>
+    You have selected {{selectedplayer.name | uppercase}}
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>
+<div style="text-align: center">
+  <a>Add a player:</a> <input #playerName />
+  <button (click)="add(playerName.value); playerName.value=''">
+    Add Player
+  </button>
+</div>
+</div>
